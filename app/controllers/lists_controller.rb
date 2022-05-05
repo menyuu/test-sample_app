@@ -30,11 +30,11 @@ class ListsController < ApplicationController
 
   private
   def list_params
-    params.permit(:title, :body)    # .require(:list)これとルーティングエラーが気に入らない
+    params.permit(:title, :body, :image)    # .require(:list)これとルーティングエラーが気に入らない
   end
   
   def update_list_params
-    params.require(:list).permit(:title, :body)
+    params.require(:list).permit(:title, :body, :image)
   end
 
 end
